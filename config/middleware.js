@@ -3,5 +3,6 @@ module.exports.setFlash = function(req,res,next){
         'success' : req.flash('success'),
         'error' : req.flash('error')
     }
+    console.log(res.locals);
     next();
 }
