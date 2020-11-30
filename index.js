@@ -66,6 +66,8 @@ app.use(passport.setAuthenticatedUser);
 
 app.use(flash());
 app.use(customMware.setFlash);
+//MAKE THE UPLOADS PATH AVAILABLE TO THE BROWSER
+app.use('/uploads',express.static(__dirname + '/uploads'));
 
 // use express router
 app.use('/', require('./routes'));
